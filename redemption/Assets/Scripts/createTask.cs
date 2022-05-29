@@ -6,30 +6,23 @@ using UnityEngine.UI;
 public class createTask : MonoBehaviour
 {
     [SerializeField] GameObject btn_manager;
+    [SerializeField] GameObject task_template;
+    [SerializeField] Transform task_content;
 
     btns_manager clickedAccept;
-    InputField newChore;
-
-    // Start is called before the first frame update
     void Start()
     {
         clickedAccept = btn_manager.GetComponent<btns_manager>();
-        newChore = this.GetComponent<InputField>();
-
-        clickedAccept.onAcceptBtnPressed += ClickedAccept_onAcceptBtnPressed;
-        
+        clickedAccept.onAcceptBtnPressed += ClickedAccept_onAcceptBtnPressed;      
     }
 
     private void ClickedAccept_onAcceptBtnPressed(object sender, System.EventArgs e)
     {
-        //instantiez un task cu textul imput fieldului
-        //plasez copia in chenar
-        Debug.Log("Boing");
-    }
+        GameObject task;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        task = Instantiate(task_template);
+        task.transform.SetParent(task_content);
+        task.transform.localScale = task_content.localScale;
+        Debug.Log("Boing");
     }
 }
