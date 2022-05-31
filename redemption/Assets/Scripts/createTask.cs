@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
 
 
 public class createTask : MonoBehaviour
@@ -30,7 +27,7 @@ public class createTask : MonoBehaviour
     }
     void Start()
     {
-        clickedAccept.onAcceptBtnPressed += ClickedAccept_onAcceptBtnPressed;      
+        clickedAccept.onAcceptBtnPressed += ClickedAccept_onAcceptBtnPressed;
     }
 
     private void ClickedAccept_onAcceptBtnPressed(object sender, System.EventArgs e)
@@ -42,10 +39,7 @@ public class createTask : MonoBehaviour
 
         task_text = new_task.transform.GetChild(0).gameObject;
         txt = task_text.GetComponent<TMP_Text>();
-        
-        txt.text = task_textEditor.text;
 
-        Debug.Log("Boing");
-        Debug.Log(task_textEditor.text);
+        txt.text = task_textEditor.text;
     }
 }
