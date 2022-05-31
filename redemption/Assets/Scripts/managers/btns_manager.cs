@@ -14,6 +14,5 @@ public class btns_manager : MonoBehaviour
     public void Clear_List()
     {
         onClearListBtnPressed?.Invoke(this, EventArgs.Empty);
-        Debug.Log("CLEAR");
     }
 }

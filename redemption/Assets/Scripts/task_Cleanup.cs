@@ -17,8 +17,10 @@ public class task_Cleanup : MonoBehaviour
     {
         Debug.Log("CLEAR");
 
-        foreach (GameObject child in Task_Container)
+        for (int i = 0; i < Task_Container.childCount; i++)
         {
+            GameObject child = Task_Container.GetChild(i).gameObject;
+
             child.transform.DetachChildren();
             Destroy(child);
         }
