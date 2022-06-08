@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class createTask : MonoBehaviour
 {
-    //pt event
+    //legatura catre event
     [SerializeField] btns_manager addEvent;
 
-    //pt a obtine prefab-ul pt task
+    //referinta la Prefab
     [SerializeField] GameObject PF_task;
 
-    //pt a obine parintele final
+    //parintele noului task
     [SerializeField] Transform task_panel;
 
-    GameObject task_text;
-    TMP_Text txt;
+    //cache related vars
     TMP_InputField task_textEditor;
 
-    //initializare
     private void Awake()
     {
         task_textEditor = GetComponent<TMP_InputField>();
@@ -33,9 +31,11 @@ public class createTask : MonoBehaviour
         new_task.transform.SetParent(task_panel);
         new_task.transform.localScale = task_panel.localScale;
 
+        GameObject task_text;
         task_text = new_task.transform.GetChild(0).gameObject;
-        txt = task_text.GetComponent<TMP_Text>();
 
+        TMP_Text txt;
+        txt = task_text.GetComponent<TMP_Text>();
         txt.text = task_textEditor.text;
     }
 }
