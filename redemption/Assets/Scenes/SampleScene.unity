@@ -526,9 +526,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7607384c802cc234a93dfe0f02b28c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btn_manager: {fileID: 1844593735}
+  addEvent: {fileID: 1844593736}
   PF_task: {fileID: 4881925143273260225, guid: 6f0aea8ad022941439f1ec4e63469159, type: 3}
-  task_content: {fileID: 1738763985}
+  task_panel: {fileID: 1738763985}
 --- !u!1 &125627206
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,8 +1070,8 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_ScreenMatchMode: 2
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
